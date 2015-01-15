@@ -35,5 +35,14 @@ public class MoneyTest {
         assertEquals(Money.Dollar(15), five.times(3));
     }
 
+    @Test
+    public void testSimpleAddition() {
+        Money five= new Money(5,"USD");
+        Expression sum= five.plus(five);
+        Bank bank= new Bank();
+        Money reduced= bank.reduce(sum, "USD");
+        assertEquals(new Money(10,"USD"), reduced);
+    }
+
 
 }
