@@ -8,10 +8,10 @@ public class MoneyTest {
 
     @Test
     public void testEquality() {
-        assertTrue(new Dollar(5).equals(new Dollar(5)));
-        assertFalse(new Dollar(5).equals(new Dollar(6)));
-        assertTrue(new Franc(5).equals(new Franc(5)));
-        assertFalse(new Franc(5).equals(new Franc(6)));
-        assertFalse(new Franc(5).equals(new Dollar(5)));
+        assertTrue(Money.Dollar(5).equals(Money.Dollar(5)));
+        assertFalse(Money.Dollar(5).equals(Money.Dollar(6)));
+        assertTrue(Money.Franc(5).equals(Money.Franc(5)));
+        assertFalse(Money.Franc(5).equals(Money.Franc(6)));
+        assertFalse(Money.Franc(5).equals(Money.Dollar(5)));
     }
 }
