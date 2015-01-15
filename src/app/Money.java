@@ -1,23 +1,41 @@
 /**
  * Created by arthurhouillon on 15/01/2015.
  */
-public abstract class Money {
-    abstract Money times(int multiplier);
+public class Money {
+
+
+    public String toString() {
+        return amount + " " + currency;
+    }
+
+
 
     protected int amount;
+    protected String currency;
 
+    public Money(int value, String currency){
+        amount=value;
+        this.currency=currency;
+    }
+
+
+    public Money times(int multiplier){
+        return new Money(amount*multiplier, currency);
+    }
 
 
     public boolean equals(Object object) {
         Money money = (Money) object;
-        return amount == money.amount && getClass().equals(money.getClass());
+        return amount == money.amount && currency==money.currency;
     }
 
 
     public static Money Dollar(int amount) {
-        return new Dollar(amount);
+        return new Dollar(amount,"USD");
     }
     public static Money Franc(int amount) {
-        return new Franc(amount);
+        return new Franc(amount, "CHF");
     }
+
+
 }
