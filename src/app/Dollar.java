@@ -2,7 +2,7 @@
  * Created by arthurhouillon on 15/01/2015.
  */
 public class Dollar {
-    int amount;
+    private int amount;
 
     public Dollar(int value) {
         amount=value;
