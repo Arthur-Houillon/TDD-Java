@@ -15,6 +15,7 @@ class Pair {
         return from.equals(pair.from) && to.equals(pair.to);
     }
 
-    public int hashCode() { return 0;
+    public int hashCode() {
+        return 0;
     }
 }
